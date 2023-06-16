@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import { MoviesItem, MoviesTitle } from './Movies.styled';
 import { fetchMovies } from '../../Api/fetchMovies';
 import { Searchbar } from 'components/Searchbar/Searchbar';
@@ -7,6 +7,8 @@ import { Searchbar } from 'components/Searchbar/Searchbar';
 function Movies() {
   const [movies, setMovies] = useState('');
   const [searchParams, setSearchParams] = useSearchParams();
+
+  const location = useLocation();
 
   useEffect(() => {
     const searchQuery = searchParams.get('query') ?? '';
@@ -26,7 +28,7 @@ function Movies() {
           {movies.results.map(result => {
             return (
               <MoviesTitle key={result.id}>
-                <MoviesItem to={`${result.id}`}>
+                <MoviesItem to={`${result.id}`} state={{ from: location }}>
                   <p>{result.original_title}</p>
                 </MoviesItem>
               </MoviesTitle>
