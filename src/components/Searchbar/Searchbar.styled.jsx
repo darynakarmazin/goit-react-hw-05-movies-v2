@@ -20,9 +20,9 @@ export const SearchForm = styled.form`
   align-items: center;
   width: 100%;
   max-width: 600px;
-  background-color: #fff;
-  border-radius: 3px;
   overflow: hidden;
+  border-radius: 8px;
+  border: 1px solid #fff;
 
   button {
     display: inline-block;
@@ -30,9 +30,9 @@ export const SearchForm = styled.form`
     height: 48px;
     border: 0;
     background-size: 40%;
+    background-color: orange;
     background-repeat: no-repeat;
     background-position: center;
-    opacity: 0.6;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
     cursor: pointer;
     outline: none;
@@ -67,10 +67,13 @@ export const SearchForm = styled.form`
     outline: none;
     padding-left: 20px;
     padding-right: 4px;
+    background: transparent;
+    color: #ffffff;
   }
 
   input::placeholder {
     font: inherit;
     font-size: 18px;
+    color: #ffffff;
   }
 `;
