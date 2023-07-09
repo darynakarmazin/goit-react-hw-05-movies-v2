@@ -21,15 +21,17 @@ export const HeaderNavList = styled.nav`
 
 export const StyledHomeLink = styled(NavLink)`
   color: #ffffff;
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1.19;
   padding: 16px 0;
   text-decoration: none;
+  font-style: italic;
+  font-weight: 600;
 `;
 
 export const StyledLink = styled(NavLink)`
   color: #e6e6e6;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 1.19;
   padding: 16px 0;
   text-decoration: none;
