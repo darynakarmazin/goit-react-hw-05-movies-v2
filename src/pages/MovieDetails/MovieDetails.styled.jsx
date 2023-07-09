@@ -34,12 +34,14 @@ export const MovieDetailsLink = styled(NavLink)`
 
 export const GoBackLink = styled(Link)`
   display: inline-block;
-  color: #e6e6e6;
-  font-size: 12px;
+  color: #111111;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 28px;
   text-decoration: none;
-  background-color: transparent;
-  border: 0.5px solid #e6e6e6;
-  border-radius: 9px;
-  padding: 2px 4px;
+  padding: 2px 12px;
   margin-bottom: 20px;
+  border-radius: 74px;
+  background: var(--linear, linear-gradient(145deg, #ffc226 0%, #f84119 100%));
 `;

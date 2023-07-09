@@ -30,7 +30,10 @@ export const SearchForm = styled.form`
     height: 48px;
     border: 0;
     background-size: 40%;
-    background-color: orange;
+    background: var(
+      --linear,
+      linear-gradient(145deg, #ffc226 0%, #f84119 100%)
+    );
     background-repeat: no-repeat;
     background-position: center;
     transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
