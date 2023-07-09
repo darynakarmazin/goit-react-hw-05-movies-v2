@@ -22,5 +22,6 @@ export const Hero = styled.div`
 
 export const HeroText = styled.div`
   color: #e6e6e6;
-  padding: 84px 699px 124px 116px;
+  max-width: 400px;
+  padding: 84px 0 124px 116px;
 `;

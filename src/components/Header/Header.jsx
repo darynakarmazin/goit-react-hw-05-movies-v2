@@ -3,11 +3,13 @@ import {
   HeaderTag,
   HeaderNavList,
   StyledLink,
+  StyledHomeLink,
 } from 'components/Header/Header.styled';
 
 export function Header() {
   return (
     <HeaderTag>
+      <StyledHomeLink to="/">Cinemania</StyledHomeLink>
       <HeaderNavList>
         <StyledLink to="/">Home</StyledLink>
         <StyledLink to="/movies">Movies </StyledLink>
