@@ -50,7 +50,7 @@ function MovieDetails() {
           </div>
         </MovieDetailsDiv>
         <h4>Additional information</h4>
-        <ul>
+        <ul style={{ listStyle: 'none' }}>
           <li>
             <MovieDetailsLink to="cast">Cast</MovieDetailsLink>
           </li>

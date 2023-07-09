@@ -20,13 +20,23 @@ export const MovieDetailsGenres = styled.div`
 `;
 
 export const MovieDetailsLink = styled(NavLink)`
-  color: #e6e6e6;
-  margin: 0;
+  display: inline-block;
+  font-size: 18px;
+  line-height: 28px;
   text-decoration: none;
-  font-size: 14px;
+  padding: 2px 12px;
+  margin-bottom: 20px;
+  border-radius: 74px;
+  color: orange;
+  background: #111111;
+  border: orange 1px solid;
 
   &.active {
-    color: orange;
+    color: #111111;
+    background: var(
+      --linear,
+      linear-gradient(145deg, #ffc226 0%, #f84119 100%)
+    );
   }
 `;
 
