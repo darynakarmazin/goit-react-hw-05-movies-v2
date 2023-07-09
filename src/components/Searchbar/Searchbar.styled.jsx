@@ -12,7 +12,6 @@ export const SearchbarHeader = styled.div`
   z-index: 10;
   margin: 0 auto;
   background-color: #0a0909;
-  border-bottom: 1px solid #ffffff;
 `;
 
 export const SearchForm = styled.form`
