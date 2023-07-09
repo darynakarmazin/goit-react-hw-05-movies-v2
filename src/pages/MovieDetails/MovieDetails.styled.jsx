@@ -27,9 +27,9 @@ export const MovieDetailsLink = styled(NavLink)`
   padding: 2px 12px;
   margin-bottom: 20px;
   border-radius: 74px;
-  color: orange;
+  color: #ffffff;
   background: #111111;
-  border: orange 1px solid;
+  border: #ffffff 1px solid;
 
   &.active {
     color: #111111;
@@ -37,6 +37,7 @@ export const MovieDetailsLink = styled(NavLink)`
       --linear,
       linear-gradient(145deg, #ffc226 0%, #f84119 100%)
     );
+    border: #f84119 1px solid;
   }
 `;
 
