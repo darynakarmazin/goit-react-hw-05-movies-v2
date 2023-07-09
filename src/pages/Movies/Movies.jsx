@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { useLocation, useSearchParams } from 'react-router-dom';
-import { MoviesItem, MoviesTitle } from './Movies.styled';
 import { fetchMovies } from '../../Api/fetchMovies';
 import { Searchbar } from 'components/Searchbar/Searchbar';
 import {

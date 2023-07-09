@@ -14,7 +14,6 @@ function Home() {
       })
       .catch(err => console.error('error:' + err));
   }, []);
-  console.log(movies);
 
   return (
     <HomeDiv>
