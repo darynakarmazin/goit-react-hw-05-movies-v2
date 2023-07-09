@@ -3,6 +3,13 @@ import { useLocation, useSearchParams } from 'react-router-dom';
 import { MoviesItem, MoviesTitle } from './Movies.styled';
 import { fetchMovies } from '../../Api/fetchMovies';
 import { Searchbar } from 'components/Searchbar/Searchbar';
+import {
+  HomeItem,
+  TrendingImg,
+  TrendingLi,
+  TrendingList,
+  TrendingName,
+} from 'components/HomeTrendingList/HomeTrendingList.styled';
 
 function Movies() {
   const [movies, setMovies] = useState('');
@@ -24,17 +31,24 @@ function Movies() {
     <>
       <Searchbar setSearchParams={setSearchParams} />
       {movies && (
-        <ul>
+        <TrendingList>
           {movies.results.map(result => {
             return (
-              <MoviesTitle key={result.id}>
-                <MoviesItem to={`${result.id}`} state={{ from: location }}>
-                  <p>{result.original_title}</p>
-                </MoviesItem>
-              </MoviesTitle>
+              <TrendingLi key={result.id}>
+                <HomeItem to={`${result.id}`} state={{ from: location }}>
+                  <TrendingImg
+                    width="264px"
+                    height="384px"
+                    src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
+                    alt={result.title}
+                  />
+                  <TrendingName>{result.original_title}</TrendingName>
+                  <p>User Scrore: {Math.round(result.vote_average * 10)}%</p>
+                </HomeItem>
+              </TrendingLi>
             );
           })}
-        </ul>
+        </TrendingList>
       )}
     </>
   );
