@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import { fetchMovies } from '../../Api/fetchMovies';
+import { CastList } from './Cast.styled';
 
 export default function Cast() {
   const { movieId } = useParams();
@@ -17,13 +18,13 @@ export default function Cast() {
 
   return (
     credits && (
-      <ul>
+      <CastList>
         {credits.cast.map(credit => {
           return (
             <li key={credit.id}>
               <img
-                width="100px"
-                height="150px"
+                width="150px"
+                height="225px"
                 src={`https://image.tmdb.org/t/p/original/${credit.profile_path}`}
                 alt={credit.name}
               />
@@ -32,7 +33,7 @@ export default function Cast() {
             </li>
           );
         })}
-      </ul>
+      </CastList>
     )
   );
 }

@@ -8,6 +8,7 @@ import {
   GoBackLink,
 } from './MovieDetails.styled';
 import { fetchMovies } from '../../Api/fetchMovies';
+import { TrendingImg } from 'components/HomeTrendingList/HomeTrendingList.styled';
 
 function MovieDetails() {
   const { movieId } = useParams();
@@ -30,9 +31,9 @@ function MovieDetails() {
       <MovieDetailsPage>
         <GoBackLink to={backLinkHref}>&larr; Go back</GoBackLink>
         <MovieDetailsDiv>
-          <img
-            width="200px"
-            height="300px"
+          <TrendingImg
+            width="264px"
+            height="384px"
             src={`https://image.tmdb.org/t/p/original/${movie.poster_path}`}
             alt={movie.title}
           />
