@@ -35,12 +35,23 @@ function Movies() {
             return (
               <TrendingLi key={result.id}>
                 <HomeItem to={`${result.id}`} state={{ from: location }}>
-                  <TrendingImg
-                    width="264px"
-                    height="384px"
-                    src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
-                    alt={result.title}
-                  />
+                  {result.poster_path && (
+                    <TrendingImg
+                      width="264px"
+                      height="384px"
+                      src={`https://image.tmdb.org/t/p/original/${result.poster_path}`}
+                      alt={result.title}
+                    />
+                  )}
+                  {!result.poster_path && (
+                    <TrendingImg
+                      width="264px"
+                      height="384px"
+                      src="https://img.freepik.com/free-vector/realistic-3d-cinema-film-strip-in-perspective-isolated_260559-136.jpg?w=1480&t=st=1688971449~exp=1688972049~hmac=4130f81f89c6c87d8f7eaa7b8189af5d82c935b8a25af592d85425ef0f19971e"
+                      // src="https://content2.rozetka.com.ua/goods/images/big/299131367.jpg"
+                      alt={result.title}
+                    />
+                  )}
                   <TrendingName>{result.original_title}</TrendingName>
                   <p>User Scrore: {Math.round(result.vote_average * 10)}%</p>
                 </HomeItem>
