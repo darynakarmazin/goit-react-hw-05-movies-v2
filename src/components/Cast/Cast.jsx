@@ -22,12 +22,23 @@ export default function Cast() {
         {credits.cast.map(credit => {
           return (
             <li key={credit.id}>
-              <img
-                width="150px"
-                height="225px"
-                src={`https://image.tmdb.org/t/p/original/${credit.profile_path}`}
-                alt={credit.name}
-              />
+              {credit.profile_path && (
+                <img
+                  width="150px"
+                  height="225px"
+                  src={`https://image.tmdb.org/t/p/original/${credit.profile_path}`}
+                  alt={credit.name}
+                />
+              )}
+
+              {!credit.profile_path && (
+                <img
+                  width="150px"
+                  height="225px"
+                  src="https://axiomplus.com.ua/pub/media/review/default_avatar.svg"
+                  alt={credit.name}
+                />
+              )}
               <h3>{credit.name}</h3>
               <p>{credit.character}</p>
             </li>
